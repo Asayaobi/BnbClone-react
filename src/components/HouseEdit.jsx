@@ -24,6 +24,7 @@ function HouseEdit() {
   // Use the useEffect hook to trigger the getHouse function when the component loads
   useEffect(() => {
     getHouse()
+    // eslint-disable-next-line
   }, [])
 
   //update the data with patch
