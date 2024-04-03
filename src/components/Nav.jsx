@@ -34,13 +34,13 @@ function Nav() {
 
             {/* my profile button */}
             <Link to="/profile">
-              <button className="border border-gray-300 rounded-md p-2">
+              <button className="flex border border-gray-300 rounded-md p-2">
                 <img
                   className=" rounded-full w-5"
                   src="https://randomuser.me/api/portraits/men/81.jpg"
                   alt="John Lopez"
                 />
-                <div>Profile</div>
+                <div className=" pl-2">Profile</div>
               </button>
             </Link>
           </>
