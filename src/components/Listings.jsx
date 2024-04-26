@@ -2,6 +2,7 @@ import Nav from './Nav'
 import HouseCard from './HouseCard'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+axios.defaults.withCredentials = true
 
 function Listings() {
   const [listings, setListings] = useState([])
