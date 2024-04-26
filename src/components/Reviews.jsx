@@ -35,7 +35,7 @@ function Reviews(props) {
 
   const getReviews = async () => {
     let result = await axios.get(
-      `https://haiku-bnb.onrender.com/reviews?house_id=${params.id}`
+      `https://demo-api-bnb.onrender.com/reviews?house_id=${params.id}`
     )
     setReviews(result.data)
   }
@@ -122,13 +122,13 @@ function Review(props) {
           {/* user picture */}
           <div className=" rounded-full w-10 h-10 mr-3">
             <img
-              src={props.review.author.picture}
+              src={props.review.author.profile_pic_url}
               alt={`user profile of ${props.review.author.firstName}`}
               className="rounded-full"
             />
           </div>
           <div>
-            <div className=" text-gray-400">{props.review.date}</div>
+            <div className=" text-gray-400">{props.review.review_date}</div>
             <div className="flex gap-2">
               {/* first name */}
               <div>{props.review.author.firstName}</div>
@@ -140,7 +140,7 @@ function Review(props) {
         <div className=" flex my-3">
           {/* stars icon to the rating */}
           <div>
-            {[...new Array(props.review.rating)].map((i, index) => (
+            {[...new Array(props.review.star_rating)].map((i, index) => (
               <FontAwesomeIcon
                 key={index}
                 icon={faStar}
@@ -148,9 +148,9 @@ function Review(props) {
               />
             ))}
           </div>
-          <div className="ml-2">{props.review.rating}</div>
+          <div className="ml-2">{props.review.star_rating}</div>
         </div>
-        <div>{props.review.content}</div>
+        <div>{props.review.review_text}</div>
       </div>
     </div>
   )
