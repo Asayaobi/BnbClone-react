@@ -15,7 +15,7 @@ function LogIn() {
     let formObject = Object.fromEntries(form.entries())
     console.log(formObject)
     const response = await axios.post(
-      'https://haiku-bnb.onrender.com/login',
+      'https://demo-api-bnb.onrender.com/login',
       formObject
     )
     if (response.data.error) {

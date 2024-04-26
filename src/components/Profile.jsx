@@ -13,7 +13,9 @@ function Profile() {
 
   const getData = async () => {
     try {
-      const response = await axios.get('https://haiku-bnb.onrender.com/profile')
+      const response = await axios.get(
+        'https://demo-api-bnb.onrender.com/profile'
+      )
       console.log('userdata', response.data)
       if (response.data.error) {
         navigate('/')
@@ -34,7 +36,7 @@ function Profile() {
     console.log(formObj)
     try {
       const response = await axios.patch(
-        'https://haiku-bnb.onrender.com/profile',
+        'https://demo-api-bnb.onrender.com/profile',
         formObj
       )
       console.log('patch response', response.data)
@@ -51,7 +53,9 @@ function Profile() {
   const logout = async (e) => {
     e.preventDefault()
     try {
-      const { data } = await axios.get('https://haiku-bnb.onrender.com/logout')
+      const { data } = await axios.get(
+        'https://demo-api-bnb.onrender.com/logout'
+      )
       console.log({ data })
       localStorage.removeItem('isLoggedIn')
       navigate('/')
@@ -73,8 +77,8 @@ function Profile() {
           <div className="flex gap-2 mt-4">
             <img
               name="picture"
-              defaultValue={picture}
-              src={picture}
+              defaultValue={user.profile_pic_url}
+              src={user.profile_pic_url}
               alt="John Lopez"
               className="border rounded-full  w-16"
             />
@@ -82,8 +86,8 @@ function Profile() {
               <input
                 defaultValue={picture}
                 type="text"
-                value={user.profile_picture}
-                placeholder={user.profile_picture}
+                value={user.profile_pic_url}
+                placeholder={user.profile_pic_url}
                 className="border border-gray-200 w-full p-2 rounded-md"
               />
             </div>
