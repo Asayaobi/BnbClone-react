@@ -15,7 +15,7 @@ function HouseCard(props) {
         {/* photo */}
         <div className="w-70">
           <img
-            src={`${props.house.photo}`}
+            src={`${props.house.pic_url}`}
             alt={`house in ${props.house.location}`}
             className="w-full rounded-tr-md rounded-tl-md"
           />
@@ -23,8 +23,8 @@ function HouseCard(props) {
         {/* location, room, and price */}
         <div className=" pl-5 pr-5">
           <div className=" text-lg font-bold">{props.house.location}</div>
-          <div className=" text-gray-500">{`${props.house.rooms} rooms • ${props.house.bathrooms} bathrooms`}</div>
-          <div className=" text-xl font-bold">{`$ ${props.house.price}`}</div>
+          <div className=" text-gray-500">{`${props.house.bedrooms} rooms • ${props.house.bathrooms} bathrooms`}</div>
+          <div className=" text-xl font-bold">{`$ ${props.house.price_per_night}`}</div>
           <div className="flex justify-between mt-3">
             {/* ratings and stars */}
             <span className="flex gap-x-1">
