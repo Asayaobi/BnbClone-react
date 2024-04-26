@@ -16,7 +16,7 @@ function House() {
   // then sets the object as the value of the house state variable
   const getHouse = async () => {
     let { data } = await axios.get(
-      `https://haiku-bnb.onrender.com/houses/${params.id}`
+      `https://demo-api-bnb.onrender.com/houses/${params.id}`
     )
     console.log('data------->', data)
     setHouse(data)
@@ -42,7 +42,7 @@ function House() {
             <div className=" col-span-2">
               <div className=" text-3xl font-bold mt-5">{house.location}</div>
               <div className="flex text-gray-400 mt-4 text-sm gap-2">
-                <div>{house.rooms}</div>
+                <div>{house.bedrooms}</div>
                 <div> rooms • </div>
                 <div>{house.bathrooms}</div>
                 <div>bathrooms</div>
@@ -50,7 +50,7 @@ function House() {
               <div className="flex col-span-2 justify-start gap-1 mt-8">
                 <div>
                   <img
-                    src={house.host.picture}
+                    src={house.host.profile_pic_url}
                     alt={`${house.host.firstName} is hosting this house`}
                     className="rounded-full h-14 w-14"
                   />
