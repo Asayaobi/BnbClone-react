@@ -15,7 +15,9 @@ function Filter({ setHouses }) {
   //functions
   // make an initial GET request to the /locations endpoint of the API
   const getLocation = async () => {
-    let { data } = await axios.get(`https://haiku-bnb.onrender.com/locations`)
+    let { data } = await axios.get(
+      `https://demo-api-bnb.onrender.com/locations`
+    )
     setLocations(data)
   }
   //function to prevent default then get data to api
@@ -42,7 +44,7 @@ function Filter({ setHouses }) {
       if (e.target.search.value) {
         queryArray.push(`search=${e.target.search.value}`)
       }
-      let url = `https://haiku-bnb.onrender.com/houses?${queryArray.join('&')}`
+      let url = `https://demo-api-bnb.onrender.com/houses?${queryArray.join('&')}`
       const response = await axios.get(url)
       setHouses(response.data)
     } catch (error) {
