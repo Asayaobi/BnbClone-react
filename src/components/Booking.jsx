@@ -31,7 +31,7 @@ function Booking({ house }) {
       //get house id from the props
       formObject.house_id = house.house_id
       let response = await axios.post(
-        'https://haiku-bnb.onrender.com/bookings',
+        'https://demo-bnb-api.onrender.com/bookings',
         formObject
       )
       //check if there's an error with booking date
@@ -59,7 +59,7 @@ function Booking({ house }) {
   // useEffect to update totalPrice
   useEffect(() => {
     if (house) {
-      setTotalPrice(nights * house.price)
+      setTotalPrice(nights * house.price_per_night)
     }
     // eslint-disable-next-line
   }, [nights])
@@ -76,7 +76,7 @@ function Booking({ house }) {
           <form onSubmit={createBooking}>
             <span className="flex text-xl font-bold">
               <div>$</div>
-              <div>{house.price}</div>
+              <div>{house.price_per_night}</div>
             </span>
             <span className=" text-gray-400 font-bold text-sm"> /night</span>
             <div className="flex justify-between mt-5 gap-1">
