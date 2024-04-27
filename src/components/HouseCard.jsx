@@ -43,7 +43,7 @@ function HouseCard(props) {
             </span>
             {/* total reviews */}
             <span className="flex gap-x-1">
-              <div>{props.house.reviews}</div>
+              <div>{props.house.reviews_count}</div>
               <div>
                 <FontAwesomeIcon
                   icon={faCommentDots}
