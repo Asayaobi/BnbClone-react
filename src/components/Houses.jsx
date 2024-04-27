@@ -19,8 +19,12 @@ function Houses() {
   }, [])
 
   const listOfHouseCards = houses.map((house, index) => (
-    <HouseCard key={index} house={house} />
+    <HouseCard
+      key={index}
+      house={{ ...house, price: house.price || house.price_per_night }}
+    />
   ))
+
   return (
     <>
       <div className=" container mx-auto">
