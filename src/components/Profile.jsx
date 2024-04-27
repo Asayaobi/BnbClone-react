@@ -21,7 +21,7 @@ function Profile() {
         navigate('/')
       } else {
         setUser(response.data)
-        setPicture(response.data.picture)
+        setPicture(response.data.profile_pic_url)
       }
     } catch (e) {
       alert(e.message)
@@ -84,9 +84,7 @@ function Profile() {
             />
             <div className="flex justify-center w-full self-center">
               <input
-                defaultValue={picture}
                 type="text"
-                value={user.profile_pic_url}
                 placeholder={user.profile_pic_url}
                 className="border border-gray-200 w-full p-2 rounded-md"
               />
