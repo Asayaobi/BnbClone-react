@@ -22,14 +22,14 @@ function HouseCard(props) {
         </div>
         {/* location, room, and price */}
         <div className=" pl-5 pr-5">
-          <div className=" text-lg font-bold">{props.house.location}</div>
-          <div className=" text-gray-500">{`${props.house.bedrooms} rooms • ${props.house.bathrooms} bathrooms`}</div>
+          <div className=" text-lg font-bold">{booking.location}</div>
+          <div className=" text-gray-500">{`${booking.bedrooms} rooms • ${booking.bathrooms} bathrooms`}</div>
           <div className=" text-xl font-bold">{`$ ${booking.price}`}</div>
           <div className="flex justify-between mt-3">
             {/* ratings and stars */}
             <span className="flex gap-x-1">
               <div>
-                {Array.from({ length: Math.floor(props.house.rating) }).map(
+                {Array.from({ length: Math.floor(booking.rating) }).map(
                   (i, index) => (
                     <FontAwesomeIcon
                       icon={faStar}
@@ -39,11 +39,11 @@ function HouseCard(props) {
                   )
                 )}
               </div>
-              <div>{props.house.rating}</div>
+              <div>{booking.rating}</div>
             </span>
             {/* total reviews */}
             <span className="flex gap-x-1">
-              <div>{props.house.reviews_count}</div>
+              <div>{booking.reviews_count}</div>
               <div>
                 <FontAwesomeIcon
                   icon={faCommentDots}
