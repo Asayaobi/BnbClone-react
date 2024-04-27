@@ -57,7 +57,7 @@ function Nav() {
                 <img
                   className=" rounded-full w-5"
                   src={user.profile_pic_url}
-                  alt={user.first_name}
+                  alt="user"
                 />
                 <div className=" pl-2">Profile</div>
               </button>
