@@ -88,7 +88,7 @@ function Listings() {
               />
               <div className=" text-gray-400 mt-2 text-sm">Price per Night</div>
               <input
-                name="price"
+                name="price_per_night"
                 type="number"
                 className="border border-gray-200 rounded-md p-2 w-full placeholder-black"
               />
