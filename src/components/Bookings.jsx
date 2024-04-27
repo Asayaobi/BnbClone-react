@@ -2,6 +2,7 @@ import Nav from './Nav'
 import HouseCard from './HouseCard'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
+axios.defaults.withCredentials = true
 
 function Bookings() {
   const [bookings, setBookings] = useState([])
@@ -9,7 +10,9 @@ function Bookings() {
   // function to get bookings
   const getBookings = async (e) => {
     try {
-      let response = await axios.get('https://haiku-bnb.onrender.com/bookings')
+      let response = await axios.get(
+        'https://demo-api-bnb.onrender.com/bookings'
+      )
       console.log('response data', response.data)
       setBookings(response.data)
     } catch (error) {
