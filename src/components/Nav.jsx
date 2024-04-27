@@ -1,27 +1,10 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
 import axios from 'axios'
 axios.defaults.withCredentials = true
 
 function Nav() {
-  // Define user state
-  const [user, setUser] = useState(null)
   // const isLoggedIn = false
   const isLoggedIn = localStorage.getItem('isLoggedIn')
-  const getData = async () => {
-    try {
-      const response = await axios.get(
-        'https://demo-api-bnb.onrender.com/profile'
-      )
-      console.log('userdata', response.data)
-      setUser(response.data) // Update user state with fetched data
-    } catch (e) {
-      alert(e.message)
-    }
-  }
-  useEffect(() => {
-    getData()
-  }, [])
 
   return (
     <div className="flex justify-between my-2 items-center">
@@ -54,12 +37,7 @@ function Nav() {
             {/* my profile button */}
             <Link to="/profile">
               <button className="flex border border-gray-300 rounded-md p-2">
-                <img
-                  className=" rounded-full w-5"
-                  src={user.profile_pic_url}
-                  alt={user.first_name}
-                />
-                <div className=" pl-2">Profile</div>
+                <div className=" pl-2">My Profile</div>
               </button>
             </Link>
           </>
