@@ -21,7 +21,6 @@ function Profile() {
         navigate('/')
       } else {
         setUser(response.data)
-        setPicture(response.data.profile_pic_url)
       }
     } catch (e) {
       alert(e.message)
@@ -79,11 +78,12 @@ function Profile() {
               name="picture"
               defaultValue={user.profile_pic_url}
               src={user.profile_pic_url}
-              alt="John Lopez"
+              alt="profile"
               className="border rounded-full  w-16"
             />
             <div className="flex justify-center w-full self-center">
               <input
+                name="profile_pic_url"
                 type="text"
                 placeholder={user.profile_pic_url}
                 className="border border-gray-200 w-full p-2 rounded-md"
