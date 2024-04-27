@@ -13,11 +13,11 @@ function HouseCard(props) {
     <Link to={`/houses/${props.house.house_id}`}>
       <div className="border border-gray-300 rounded-md pb-5 hover:shadow">
         {/* photo */}
-        <div className="w-70">
+        <div className="w-70 h-40 overflow-hidden">
           <img
             src={`${props.house.pic_url}`}
             alt={`house in ${props.house.location}`}
-            className="w-full rounded-tr-md rounded-tl-md"
+            className="w-full h-full object-cover rounded-tr-md rounded-tl-md"
           />
         </div>
         {/* location, room, and price */}
