@@ -11,7 +11,7 @@ function Listings() {
     async function fetchListings() {
       try {
         const response = await axios.get(
-          'https://haiku-bnb.onrender.com/listings'
+          'https://demo-api-bnb.onrender.com/listings'
         )
         setListings(response.data)
       } catch (error) {
@@ -43,7 +43,7 @@ function Listings() {
     try {
       // Send houseData to the API
       const response = await axios.post(
-        'https://haiku-bnb.onrender.com/houses',
+        'https://demo-api-bnb.onrender.com/houses',
         formObject
       )
       console.log('response.data: ', response.data)
@@ -71,12 +71,12 @@ function Listings() {
               <input
                 name="location"
                 type="text"
-                defaultValue="Bali"
+                defaultValue="Bali, Indonesia"
                 className="border border-gray-200 rounded-md p-2 w-full placeholder-black"
               />
               <div className=" text-gray-400 mt-2 text-sm">Bedrooms</div>
               <input
-                name="rooms"
+                name="bedrooms"
                 type="number"
                 className="border border-gray-200 rounded-md p-2 w-full placeholder-black"
               />
