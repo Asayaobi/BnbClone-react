@@ -33,7 +33,7 @@ function Booking({ house }) {
       formObject.house_id = house.house_id
       console.log('formOject', formObject)
       let response = await axios.post(
-        'https://demo-api-bnb.onrender.com/bookings',
+        `${process.env.REACT_APP_API_URL}/bookings`,
         formObject
       )
       //check if there's an error with booking date
