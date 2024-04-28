@@ -9,7 +9,7 @@ function Houses() {
   const [houses, setHouses] = useState([])
 
   const getHouses = async () => {
-    let { data } = await axios.get('https://demo-api-bnb.onrender.com/houses')
+    let { data } = await axios.get(`${process.env.REACT_APP_API_URL}/houses`)
     console.log('data----->', data[0])
     setHouses(data)
   }
