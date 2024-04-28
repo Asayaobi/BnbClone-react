@@ -40,7 +40,7 @@ function HouseEdit() {
       formObj.photos = form.getAll('images')
       formObj.house_id = params
       let response = await axios.patch(
-        `https://haiku-bnb.onrender.com/houses/${params.id}`,
+        `https://demo-api-bnb.onrender.com/houses/${params.id}`,
         formObj
       )
       setHouse(response.data)
