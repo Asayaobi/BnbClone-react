@@ -92,15 +92,40 @@ function Reviews(props) {
           </div>
           <form onSubmit={createReview}>
             <div className=" py-2 text-sm flex justify-start">
-              <input type="radio" name="rating" value="1" className="mr-1" />
-              <input type="radio" name="rating" value="2" className="mr-1" />
-              <input type="radio" name="rating" value="3" className="mr-1" />
-              <input type="radio" name="rating" value="4" className="mr-1" />
-              <input type="radio" name="rating" value="5" className="mr-1" />
+              <input
+                type="radio"
+                name="star_rating"
+                value="1"
+                className="mr-1"
+              />
+              <input
+                type="radio"
+                name="star_rating"
+                value="2"
+                className="mr-1"
+              />
+              <input
+                type="radio"
+                name="star_rating"
+                value="3"
+                className="mr-1"
+              />
+              <input
+                type="radio"
+                name="star_rating"
+                value="4"
+                className="mr-1"
+              />
+              <input
+                type="radio"
+                name="star_rating"
+                value="5"
+                className="mr-1"
+              />
             </div>
             <div className=" text-sm justify-start mt-3">
               <textarea
-                name="content"
+                name="review_text"
                 className=" border w-full col-span-8 text-sm pb-16 pr-16"
                 placeholder="Please leave a review for this house..."
               ></textarea>
