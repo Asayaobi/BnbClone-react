@@ -31,6 +31,7 @@ function Booking({ house }) {
       let formObject = Object.fromEntries(form.entries())
       //get house id from the props
       formObject.house_id = house.house_id
+      console.log('formOject', formObject)
       let response = await axios.post(
         'https://demo-bnb-api.onrender.com/bookings',
         formObject
@@ -85,7 +86,7 @@ function Booking({ house }) {
               <div className="w-full">
                 <div className=" text-xs text-gray-400">Check-in</div>
                 <input
-                  name="from_date"
+                  name="booking_start_date"
                   type="date"
                   className="border border-gray-200 rounded-md p-2 w-full"
                   value={startDate}
@@ -96,7 +97,7 @@ function Booking({ house }) {
               <div className="w-full">
                 <div className=" text-xs text-gray-400">Check-out</div>
                 <input
-                  name="to_date"
+                  name="booking_end_date"
                   type="date"
                   className="border border-gray-200 rounded-md p-2 w-full"
                   value={endDate}
@@ -105,7 +106,7 @@ function Booking({ house }) {
               </div>
             </div>
             <textarea
-              name="message"
+              name="message_to_host"
               placeholder="Please send a message to the host..."
               className="border border-gray-200 rounded-md mt-2 w-full p-2"
               rows="7"
