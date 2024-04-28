@@ -38,6 +38,7 @@ function Reviews(props) {
     let result = await axios.get(
       `https://demo-api-bnb.onrender.com/reviews?house_id=${params.id}`
     )
+    console.log('result.data from get req', result.data)
     setReviews(result.data)
   }
 
@@ -100,7 +101,7 @@ function Reviews(props) {
             <div className=" text-sm justify-start mt-3">
               <textarea
                 name="content"
-                className=" border w-full col-span-8 text-sm text-gray-300 pb-16 pr-16"
+                className=" border w-full col-span-8 text-sm pb-16 pr-16"
                 placeholder="Please leave a review for this house..."
               ></textarea>
             </div>
