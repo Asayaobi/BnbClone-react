@@ -43,6 +43,7 @@ function HouseEdit() {
         `https://demo-api-bnb.onrender.com/houses/${params.id}`,
         formObj
       )
+      console.log('response data', response.data)
       setHouse(response.data)
       navigate(`/houses/${params.id}`)
     } catch (e) {
@@ -69,10 +70,10 @@ function HouseEdit() {
               />
               <div className=" text-gray-400 mt-2 text-sm">Bedrooms</div>
               <input
-                defaultValue={house.rooms}
-                name="rooms"
+                defaultValue={house.bedrooms}
+                name="bedrooms"
                 type="number"
-                placeholder={house.rooms}
+                placeholder={house.bedrooms}
                 className="border border-gray-200 rounded-md p-2 w-full placeholder-black"
               />
               <div className=" text-gray-400 mt-2 text-sm">Bathrooms</div>
@@ -85,10 +86,10 @@ function HouseEdit() {
               />
               <div className=" text-gray-400 mt-2 text-sm">Price per Night</div>
               <input
-                defaultValue={house.price}
-                name="price"
+                defaultValue={house.price_per_night}
+                name="price_per_night"
                 type="number"
-                placeholder={house.price}
+                placeholder={house.price_per_night}
                 className="border border-gray-200 rounded-md p-2 w-full placeholder-black"
               />
               <div className=" text-gray-400 mt-2 text-sm">Description</div>
