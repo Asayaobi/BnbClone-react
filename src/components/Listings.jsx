@@ -11,7 +11,7 @@ function Listings() {
     async function fetchListings() {
       try {
         const response = await axios.get(
-          'https://demo-api-bnb.onrender.com/listings'
+          `${process.env.REACT_APP_API_URL}/listings`
         )
         setListings(response.data)
       } catch (error) {
@@ -30,20 +30,10 @@ function Listings() {
     formObject.photos = formData.getAll('photos')
     console.log('formObject: ', formObject)
 
-    // Extract data from the form
-    const houseData = {
-      location: formData.get('location'),
-      rooms: parseInt(formData.get('bedrooms')),
-      bathrooms: parseInt(formData.get('bathrooms')),
-      price: parseInt(formData.get('price')),
-      description: formData.get('description'),
-      photos: [...formData.getAll('photos')]
-    }
-
     try {
       // Send houseData to the API
       const response = await axios.post(
-        'https://demo-api-bnb.onrender.com/houses',
+        `${process.env.REACT_APP_API_URL}/houses`,
         formObject
       )
       console.log('response.data: ', response.data)

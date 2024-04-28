@@ -25,7 +25,7 @@ function Reviews(props) {
     formObject.house_id = props.house.house_id
     console.log('formObject with house_id', formObject)
     let response = await axios.post(
-      'https://demo-api-bnb.onrender.com/reviews',
+      `${process.env.REACT_APP_API_URL}/reviews`,
       formObject
     )
     //check if the review is posted to show thank you message
@@ -36,7 +36,7 @@ function Reviews(props) {
 
   const getReviews = async () => {
     let result = await axios.get(
-      `https://demo-api-bnb.onrender.com/reviews?house_id=${params.id}`
+      `${process.env.REACT_APP_API_URL}/reviews?house_id=${params.id}`
     )
     console.log('result.data from get req', result.data)
     setReviews(result.data)

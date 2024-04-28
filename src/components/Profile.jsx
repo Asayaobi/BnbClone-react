@@ -14,7 +14,7 @@ function Profile() {
   const getData = async () => {
     try {
       const response = await axios.get(
-        'https://demo-api-bnb.onrender.com/profile'
+        `${process.env.REACT_APP_API_URL}/profile`
       )
       console.log('userdata', response.data)
       if (response.data.error) {
@@ -35,7 +35,7 @@ function Profile() {
     console.log(formObj)
     try {
       const response = await axios.patch(
-        'https://demo-api-bnb.onrender.com/profile',
+        `${process.env.REACT_APP_API_URL}/profile`,
         formObj
       )
       console.log('patch response', response.data)
@@ -53,7 +53,7 @@ function Profile() {
     e.preventDefault()
     try {
       const { data } = await axios.get(
-        'https://demo-api-bnb.onrender.com/logout'
+        `${process.env.REACT_APP_API_URL}/logout`
       )
       console.log({ data })
       localStorage.removeItem('isLoggedIn')

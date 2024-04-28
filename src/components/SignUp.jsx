@@ -38,13 +38,16 @@ function SignUp() {
     e.preventDefault()
     console.log('email', e.target.email.value)
     console.log('password', e.target.password.value)
-    const response = await axios.post('https://haiku-bnb.onrender.com/signup', {
-      first_name: e.target.first_name.value,
-      last_name: e.target.last_name.value,
-      email: e.target.email.value,
-      password: e.target.password.value,
-      picture: e.target.picture.value
-    })
+    const response = await axios.post(
+      `${process.env.REACT_APP_API_URL}/signup`,
+      {
+        first_name: e.target.first_name.value,
+        last_name: e.target.last_name.value,
+        email: e.target.email.value,
+        password: e.target.password.value,
+        picture: e.target.picture.value
+      }
+    )
     console.log('response', response)
     // if you log in, navigate to the home page, if not, show error message
     if (response.data.error) {

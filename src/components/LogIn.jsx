@@ -13,7 +13,7 @@ function LogIn() {
     let formObject = Object.fromEntries(form.entries())
     console.log(formObject)
     const response = await axios.post(
-      'https://demo-api-bnb.onrender.com/login',
+      `${process.env.REACT_APP_API_URL}/login`,
       formObject
     )
     if (response.data.error) {

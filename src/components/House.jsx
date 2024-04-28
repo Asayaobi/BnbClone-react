@@ -16,7 +16,7 @@ function House() {
   // then sets the object as the value of the house state variable
   const getHouse = async () => {
     let { data } = await axios.get(
-      `https://demo-api-bnb.onrender.com/houses/${params.id}`
+      `${process.env.REACT_APP_API_URL}/houses/${params.id}`
     )
     console.log('data------->', data)
     setHouse(data)

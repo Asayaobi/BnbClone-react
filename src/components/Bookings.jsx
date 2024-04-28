@@ -11,7 +11,7 @@ function Bookings() {
   const getBookings = async (e) => {
     try {
       let response = await axios.get(
-        'https://demo-api-bnb.onrender.com/bookings'
+        `${process.env.REACT_APP_API_URL}/bookings`
       )
       console.log('response data', response.data)
       setBookings(response.data)

@@ -18,7 +18,7 @@ function HouseEdit() {
   // then sets the object as the value of the house state variable
   const getHouse = async () => {
     let { data } = await axios.get(
-      `https://demo-api-bnb.onrender.com/houses/${params.id}`
+      `${process.env.REACT_APP_API_URL}/houses/${params.id}`
     )
     setHouse(data)
   }
@@ -40,7 +40,7 @@ function HouseEdit() {
       formObj.photos = form.getAll('images')
       formObj.house_id = params
       let response = await axios.patch(
-        `https://demo-api-bnb.onrender.com/houses/${params.id}`,
+        `${process.env.REACT_APP_API_URL}/houses/${params.id}`,
         formObj
       )
       console.log('response data', response.data)
