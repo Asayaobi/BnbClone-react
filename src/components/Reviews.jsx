@@ -142,6 +142,8 @@ function Reviews(props) {
   )
 }
 function Review(props) {
+  // Check if props.review.author exists
+  const author = props.review.author || {}
   return (
     <div className="border border-gray-300 rounded-md col-span-2 p-5 my-4">
       <div>
@@ -149,8 +151,8 @@ function Review(props) {
           {/* user picture */}
           <div className=" rounded-full w-10 h-10 mr-3">
             <img
-              src={props.review.author.profile_pic_url}
-              alt={`user profile of ${props.review.author.firstName}`}
+              src={author.profile_pic_url}
+              alt={`user profile of ${author.firstName}`}
               className="rounded-full"
             />
           </div>
@@ -158,9 +160,9 @@ function Review(props) {
             <div className=" text-gray-400">{props.review.review_date}</div>
             <div className="flex gap-2">
               {/* first name */}
-              <div>{props.review.author.firstName}</div>
+              <div>{author.firstName}</div>
               {/* last name */}
-              <div>{props.review.author.lastName}</div>
+              <div>{author.lastName}</div>
             </div>
           </div>
         </div>
