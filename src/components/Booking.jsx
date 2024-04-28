@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+axios.defaults.withCredentials = true
 
 function Booking({ house }) {
   //creating variables for getting booking date

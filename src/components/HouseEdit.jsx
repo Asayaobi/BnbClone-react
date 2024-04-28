@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+axios.defaults.withCredentials = true
 
 function HouseEdit() {
   //params
