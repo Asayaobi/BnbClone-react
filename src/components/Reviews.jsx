@@ -38,7 +38,6 @@ function Reviews(props) {
     let result = await axios.get(
       `${process.env.REACT_APP_API_URL}/reviews?house_id=${params.id}`
     )
-    console.log('result.data from get req', result.data)
     setReviews(result.data)
   }
 
