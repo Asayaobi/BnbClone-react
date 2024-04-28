@@ -25,7 +25,7 @@ function Reviews(props) {
     formObject.house_id = props.house.house_id
     console.log('formObject with house_id', formObject)
     let response = await axios.post(
-      'https://haiku-bnb.onrender.com/reviews',
+      'https://demo-api-bnb.onrender.com/reviews',
       formObject
     )
     //check if the review is posted to show thank you message
