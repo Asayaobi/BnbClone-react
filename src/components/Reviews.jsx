@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 axios.defaults.withCredentials = true
@@ -10,8 +9,6 @@ axios.defaults.withCredentials = true
 function Reviews(props) {
   //params
   const params = useParams()
-  // declare useNavigate
-  const navigate = useNavigate()
 
   //state
   const [reviews, setReviews] = useState([])
@@ -35,8 +32,6 @@ function Reviews(props) {
     setHasBeenReviewed(true)
     //creating a new array with the most recent review at the beginning, followed by all the existing reviews
     setReviews([...reviews, response.data])
-    console.log('setReview data from post', response.data)
-    navigate(`/houses/${params.id}`)
   }
 
   const getReviews = async () => {
