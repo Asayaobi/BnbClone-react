@@ -125,15 +125,17 @@ function Filter({ setHouses }) {
           </div>
 
           {/* Keywords */}
-          <input
-            name="search"
-            type="text"
-            placeholder="keywords..."
-            className="border border-gray-300 rounded ps-9 w-full p-2"
-          />
+          <div className="flex-1 relative">
+            <input
+              name="search"
+              type="text"
+              placeholder="keywords..."
+              className="border border-gray-300 rounded ps-9 w-full p-2"
+            />
+          </div>
 
           {/* button */}
-          <button className=" bg-rose-400 text-white border rounded ps-9 w-full p-2">
+          <button className="flex-1 relative bg-rose-400 text-white border rounded ps-9 w-full p-2">
             Search
           </button>
         </div>
