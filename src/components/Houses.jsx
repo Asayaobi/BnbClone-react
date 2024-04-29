@@ -32,7 +32,9 @@ function Houses() {
         {/* pass the setHouses function to the Filters component as a prop */}
         <Filter setHouses={setHouses} />
         {/* loop through the houses array and render to HouseCard */}
-        <div className="grid gap-4 grid-cols-5 mb-5">{listOfHouseCards}</div>
+        <div className="grid gap-4 mb-5 lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1">
+          {listOfHouseCards}
+        </div>
       </div>
     </>
   )
