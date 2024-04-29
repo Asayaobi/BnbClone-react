@@ -23,7 +23,6 @@ function Reviews(props) {
     let formObject = Object.fromEntries(form.entries())
     //add house id from props.house.house_id
     formObject.house_id = props.house.house_id
-    console.log('formObject with house_id', formObject)
     let response = await axios.post(
       `${process.env.REACT_APP_API_URL}/reviews`,
       formObject
@@ -39,7 +38,6 @@ function Reviews(props) {
       `${process.env.REACT_APP_API_URL}/reviews?house_id=${params.id}`
     )
     setReviews(result.data)
-    console.log('setReview data from get', result.data)
   }
 
   useEffect(() => {
@@ -47,7 +45,6 @@ function Reviews(props) {
   }, [])
 
   // passing reviews with map
-  console.log('reviews', reviews)
   const reviewData = reviews.map((review, index) => (
     <Review key={index} review={review} />
   ))
