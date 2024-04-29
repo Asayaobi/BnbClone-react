@@ -57,7 +57,7 @@ function Filter({ setHouses }) {
     <div>
       {/* Location */}
       <form
-        className="flex justify-between rounded-md bg-gray-100 p-2"
+        className="flex flex-col justify-between gap-2"
         onSubmit={submitForm}
       >
         <div className="flex-1 relative">
@@ -68,7 +68,7 @@ function Filter({ setHouses }) {
           searching for houses with a location of "Any Location" */}
           <select
             name="location"
-            className="border border-gray-300 rounded-md py-2 pl-10 w-60"
+            className="border border-gray-300 rounded ps-9 w-full p-2"
           >
             {/* map the array of locations*/}
             <option value="">Any Location</option>
@@ -87,7 +87,7 @@ function Filter({ setHouses }) {
           </div>
           <select
             name="min_rooms"
-            className="border border-gray-300 rounded-md py-2 pl-10 w-60"
+            className="border border-gray-300 rounded ps-9 w-full p-2"
           >
             <option value="">Any Rooms</option>
             <option>1</option>
@@ -107,7 +107,7 @@ function Filter({ setHouses }) {
             name="max_price"
             type="number"
             placeholder="max price"
-            className="border border-gray-300 rounded-md py-2 pl-10 w-60"
+            className="border border-gray-300 rounded ps-9 w-full p-2"
           />
         </div>
 
@@ -118,7 +118,7 @@ function Filter({ setHouses }) {
           </div>
           <select
             name="sort"
-            className="border border-gray-300 rounded-md py-2 pl-10 w-60"
+            className="border border-gray-300 rounded ps-9 w-full p-2"
           >
             <option value="">sort by</option>
             <option value="price">price: low to high</option>
@@ -131,11 +131,11 @@ function Filter({ setHouses }) {
           name="search"
           type="text"
           placeholder="keywords..."
-          className="border border-gray-300 rounded-md p-2 w-60"
+          className="border border-gray-300 rounded ps-9 w-full p-2"
         />
 
         {/* button */}
-        <button className=" bg-rose-400 text-white py-2 px-4 rounded-md">
+        <button className=" bg-rose-400 text-white border rounded ps-9 w-full p-2">
           Search
         </button>
       </form>
