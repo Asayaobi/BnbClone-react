@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCommentDots } from '@fortawesome/free-regular-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 axios.defaults.withCredentials = true
@@ -9,6 +10,8 @@ axios.defaults.withCredentials = true
 function Reviews(props) {
   //params
   const params = useParams()
+  // declare useNavigate
+  const navigate = useNavigate()
 
   //state
   const [reviews, setReviews] = useState([])
@@ -31,7 +34,9 @@ function Reviews(props) {
     //check if the review is posted to show thank you message
     setHasBeenReviewed(true)
     //creating a new array with the most recent review at the beginning, followed by all the existing reviews
-    setReviews([response.data, ...reviews])
+    setReviews([...reviews, response.data])
+    console.log('setReview data from post', response.data)
+    navigate(`/houses/${params.id}`)
   }
 
   const getReviews = async () => {
@@ -39,6 +44,7 @@ function Reviews(props) {
       `${process.env.REACT_APP_API_URL}/reviews?house_id=${params.id}`
     )
     setReviews(result.data)
+    console.log('setReview data from get', result.data)
   }
 
   useEffect(() => {
@@ -46,6 +52,7 @@ function Reviews(props) {
   }, [])
 
   // passing reviews with map
+  console.log('reviews', reviews)
   const reviewData = reviews.map((review, index) => (
     <Review key={index} review={review} />
   ))
@@ -141,6 +148,7 @@ function Reviews(props) {
   )
 }
 function Review(props) {
+  console.log('props', props.review)
   // Check if props.review.author exists
   const author = props.review.author || {}
   return (
