@@ -56,7 +56,7 @@ function Filter({ setHouses }) {
   return (
     <div>
       <form onSubmit={submitForm}>
-        <div className="flex flex-col md:flex-row justify-between gap-2 mb-2">
+        <div className="flex flex-col lg:flex-row justify-between gap-2 mb-2">
           {/* Location */}
           <div className="flex-1 relative">
             <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
