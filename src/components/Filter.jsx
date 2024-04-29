@@ -55,89 +55,88 @@ function Filter({ setHouses }) {
   }, [])
   return (
     <div>
-      {/* Location */}
-      <form
-        className="flex flex-col justify-between gap-2"
-        onSubmit={submitForm}
-      >
-        <div className="flex-1 relative">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-            <FontAwesomeIcon icon={faHouse} className="text-xs" />
-          </div>
-          {/* Set "Any Location"  value  to an empty string to avoid
+      <form onSubmit={submitForm}>
+        <div className="flex flex-col md:flex-row justify-between gap-2">
+          {/* Location */}
+          <div className="flex-1 relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+              <FontAwesomeIcon icon={faHouse} className="text-xs" />
+            </div>
+            {/* Set "Any Location"  value  to an empty string to avoid
           searching for houses with a location of "Any Location" */}
-          <select
-            name="location"
-            className="border border-gray-300 rounded ps-9 w-full p-2"
-          >
-            {/* map the array of locations*/}
-            <option value="">Any Location</option>
-            {locations.map((location, index) => (
-              <option key={index} value={location}>
-                {location}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        {/* Rooms */}
-        <div className="flex-1 relative">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-            <FontAwesomeIcon icon={faBed} className="text-xs" />
+            <select
+              name="location"
+              className="border border-gray-300 rounded ps-9 w-full p-2"
+            >
+              {/* map the array of locations*/}
+              <option value="">Any Location</option>
+              {locations.map((location, index) => (
+                <option key={index} value={location}>
+                  {location}
+                </option>
+              ))}
+            </select>
           </div>
-          <select
-            name="min_rooms"
-            className="border border-gray-300 rounded ps-9 w-full p-2"
-          >
-            <option value="">Any Rooms</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
 
-        {/* Prices */}
-        <div className="flex-1 relative">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-            <FontAwesomeIcon icon={faDollarSign} className="text-xs" />
+          {/* Rooms */}
+          <div className="flex-1 relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+              <FontAwesomeIcon icon={faBed} className="text-xs" />
+            </div>
+            <select
+              name="min_rooms"
+              className="border border-gray-300 rounded ps-9 w-full p-2"
+            >
+              <option value="">Any Rooms</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
           </div>
+
+          {/* Prices */}
+          <div className="flex-1 relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+              <FontAwesomeIcon icon={faDollarSign} className="text-xs" />
+            </div>
+            <input
+              name="max_price"
+              type="number"
+              placeholder="max price"
+              className="border border-gray-300 rounded ps-9 w-full p-2"
+            />
+          </div>
+
+          {/* Sort by */}
+          <div className="flex-1 relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+              <FontAwesomeIcon icon={faSort} className="text-xs" />
+            </div>
+            <select
+              name="sort"
+              className="border border-gray-300 rounded ps-9 w-full p-2"
+            >
+              <option value="">sort by</option>
+              <option value="price">price: low to high</option>
+              <option value="rooms">rooms: high to low</option>
+            </select>
+          </div>
+
+          {/* Keywords */}
           <input
-            name="max_price"
-            type="number"
-            placeholder="max price"
+            name="search"
+            type="text"
+            placeholder="keywords..."
             className="border border-gray-300 rounded ps-9 w-full p-2"
           />
+
+          {/* button */}
+          <button className=" bg-rose-400 text-white border rounded ps-9 w-full p-2">
+            Search
+          </button>
         </div>
-
-        {/* Sort by */}
-        <div className="flex-1 relative">
-          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-            <FontAwesomeIcon icon={faSort} className="text-xs" />
-          </div>
-          <select
-            name="sort"
-            className="border border-gray-300 rounded ps-9 w-full p-2"
-          >
-            <option value="">sort by</option>
-            <option value="price">price: low to high</option>
-            <option value="rooms">rooms: high to low</option>
-          </select>
-        </div>
-
-        {/* Keywords */}
-        <input
-          name="search"
-          type="text"
-          placeholder="keywords..."
-          className="border border-gray-300 rounded ps-9 w-full p-2"
-        />
-
-        {/* button */}
-        <button className=" bg-rose-400 text-white border rounded ps-9 w-full p-2">
-          Search
-        </button>
       </form>
     </div>
   )
