@@ -26,7 +26,7 @@ function Houses() {
 
   return (
     <>
-      <div className=" container mx-auto">
+      <div className="container px-2 md:mx-auto">
         <Nav />
         {/* pass the setHouses function to the Filters component as a prop */}
         <Filter setHouses={setHouses} />
