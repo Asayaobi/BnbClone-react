@@ -28,7 +28,6 @@ function Listings() {
     const formObject = Object.fromEntries(formData.entries())
 
     formObject.photos = formData.getAll('photos')
-    console.log('formObject: ', formObject)
 
     try {
       // Send houseData to the API
@@ -36,7 +35,6 @@ function Listings() {
         `${process.env.REACT_APP_API_URL}/houses`,
         formObject
       )
-      console.log('response.data: ', response.data)
       // Update state with the newly created house object
       setListings((prevListings) => [...prevListings, response.data])
     } catch (error) {

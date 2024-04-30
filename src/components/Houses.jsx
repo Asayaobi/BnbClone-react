@@ -10,7 +10,6 @@ function Houses() {
 
   const getHouses = async () => {
     let { data } = await axios.get(`${process.env.REACT_APP_API_URL}/houses`)
-    console.log('data----->', data[0])
     setHouses(data)
   }
 
