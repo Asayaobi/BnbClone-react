@@ -67,7 +67,7 @@ function Profile() {
     getData()
   }, [])
   return (
-    <div className="container mx-auto">
+    <div className="container px-2 md:mx-auto">
       <Nav />
       <div className="border border-gray-300 p-5 rounded-md">
         <form onSubmit={modifyUser}>
