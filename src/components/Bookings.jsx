@@ -13,7 +13,6 @@ function Bookings() {
       let response = await axios.get(
         `${process.env.REACT_APP_API_URL}/bookings`
       )
-      console.log('response data', response.data)
       setBookings(response.data)
     } catch (error) {
       console.error(error.message)

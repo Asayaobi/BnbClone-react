@@ -12,6 +12,7 @@ import { useState, useEffect } from 'react'
 function Filter({ setHouses }) {
   //use State Hook to store the array in a state variable locations
   const [locations, setLocations] = useState([])
+
   //functions
   // make an initial GET request to the /locations endpoint of the API
   const getLocation = async () => {
