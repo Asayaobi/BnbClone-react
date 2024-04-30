@@ -17,9 +17,7 @@ function SignUp() {
   const validateEmail = (email) => {
     if (email.includes('@') && email.includes('.')) {
       setValidEmail(true)
-      console.log('valid email', email)
     } else {
-      console.log('not valid', email)
       setValidEmail(false)
     }
   }
@@ -27,17 +25,13 @@ function SignUp() {
   const validatePassword = (password) => {
     if (password.length > 6) {
       setValidPassword(true)
-      console.log('valid password', password)
     } else {
-      console.log('not valid', password)
       setValidPassword(false)
     }
   }
   //function to prevent default then post data to api
   const submitForm = async (e) => {
     e.preventDefault()
-    console.log('email', e.target.email.value)
-    console.log('password', e.target.password.value)
     const response = await axios.post(
       `${process.env.REACT_APP_API_URL}/signup`,
       {
@@ -51,7 +45,6 @@ function SignUp() {
     console.log('response', response)
     // if you log in, navigate to the home page, if not, show error message
     if (response.data.error) {
-      console.log(response.data.error)
       setError(response.data.error)
     } else {
       navigate('/')

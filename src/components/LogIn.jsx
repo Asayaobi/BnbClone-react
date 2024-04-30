@@ -11,7 +11,6 @@ function LogIn() {
     e.preventDefault()
     let form = new FormData(e.target)
     let formObject = Object.fromEntries(form.entries())
-    console.log(formObject)
     const response = await axios.post(
       `${process.env.REACT_APP_API_URL}/login`,
       formObject
