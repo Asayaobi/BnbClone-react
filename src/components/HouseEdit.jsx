@@ -43,7 +43,6 @@ function HouseEdit() {
         `${process.env.REACT_APP_API_URL}/houses/${params.id}`,
         formObj
       )
-      console.log('response data', response.data)
       setHouse(response.data)
       navigate(`/houses/${params.id}`)
     } catch (e) {
