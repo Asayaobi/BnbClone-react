@@ -42,7 +42,10 @@ function Nav() {
             </Link>
           </>
         ) : (
-          <Link to="/login" className="border border-gray-300 rounded-md p-2">
+          <Link
+            to="/login"
+            className="flex items-center ps-3.5 border border-gray-300 rounded-md p-2 w-20 "
+          >
             Login
           </Link>
         )}
