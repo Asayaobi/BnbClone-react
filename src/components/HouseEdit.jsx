@@ -55,7 +55,7 @@ function HouseEdit() {
       <Nav />
       <form onSubmit={updateHouse}>
         <div className="border border-gray-200 p-2 rounded-md mt-2">
-          <div className="grid gap-32 grid-cols-2 ">
+          <div className="grid gap-32 grid-row lg:grid-cols-2 ">
             {/* col 1 */}
             <div className="grid items-center">
               <div>Edit your listing</div>
