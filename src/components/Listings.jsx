@@ -53,7 +53,7 @@ function Listings() {
       <Nav />
       <form onSubmit={createHouse}>
         <div className="border border-gray-200 p-2 rounded-md mt-2">
-          <div className="grid gap-32 grid-cols-2 ">
+          <div className="grid gap-32 lg:grid-cols-2">
             {/* col 1 */}
             <div className="grid items-center">
               <div>List a house</div>
