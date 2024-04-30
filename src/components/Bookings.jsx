@@ -27,7 +27,7 @@ function Bookings() {
     <HouseCard key={index} house={booking} isBooking={true} />
   ))
   return (
-    <div className="container mx-auto">
+    <div className="container px-2 md:mx-auto">
       <Nav />
       <div className="grid gap-4 mb-5 xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
         {listOfBookings}
