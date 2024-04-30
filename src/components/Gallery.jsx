@@ -5,7 +5,7 @@ function Gallery(props) {
   return (
     <>
       {/* Left Picture */}
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-row lg:grid-cols-2 gap-10">
         <div className=" bg-white">
           <img src={selectedImage} alt="Sample" className=" rounded-md" />
         </div>

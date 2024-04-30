@@ -38,7 +38,7 @@ function House() {
       ) : (
         <>
           <Gallery images={house.images} />
-          <div className="grid gap-30 md:grid-cols-3">
+          <div className="grid gap-30 lg:grid-cols-3">
             <div className=" col-span-2">
               <div className=" text-3xl font-bold mt-5">{house.location}</div>
               <div className="flex text-gray-400 mt-4 text-sm gap-2">
