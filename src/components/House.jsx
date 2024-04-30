@@ -26,7 +26,7 @@ function House() {
   }, [])
   useEffect(() => {}, [loading])
   return (
-    <div className="container mx-2 md:mx-auto">
+    <div className="container px-2 md:mx-auto">
       <Nav />
       {/* if it's' loading, show loading */}
       {loading ? (
