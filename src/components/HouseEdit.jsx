@@ -51,7 +51,7 @@ function HouseEdit() {
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="container px-2 md:mx-auto">
       <Nav />
       <form onSubmit={updateHouse}>
         <div className="border border-gray-200 p-2 rounded-md mt-2">
