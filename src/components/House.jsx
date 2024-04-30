@@ -30,7 +30,7 @@ function House() {
     console.log('house---->', house)
   }, [loading])
   return (
-    <div className="container mx-auto">
+    <div className="container mx-2 md:mx-auto">
       <Nav />
       {/* if it's' loading, show loading */}
       {loading ? (
