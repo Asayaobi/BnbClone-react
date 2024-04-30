@@ -30,7 +30,9 @@ function Bookings() {
   return (
     <div className="container mx-auto">
       <Nav />
-      <div className="grid gap-4 grid-cols-5">{listOfBookings}</div>
+      <div className="grid gap-4 mb-5 xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        {listOfBookings}
+      </div>
     </div>
   )
 }
