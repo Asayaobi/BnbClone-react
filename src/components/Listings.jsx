@@ -148,7 +148,9 @@ function Listings() {
           </div>
         </div>
       </form>
-      <div className="grid gap-4 grid-cols-5 mt-4 mb-20">{listOfListings}</div>
+      <div className="grid gap-4 my-5 xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+        {listOfListings}
+      </div>
     </div>
   )
 }
