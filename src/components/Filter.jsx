@@ -136,7 +136,7 @@ function Filter({ setHouses }) {
           </div>
 
           {/* button */}
-          <button className="flex-1 relative bg-rose-400 text-white border rounded ps-9 w-full p-2">
+          <button className="flex relative bg-rose-400 text-white items-center ps-3.5 border rounded h-11 sm:w-full lg:w-20">
             Search
           </button>
         </div>
