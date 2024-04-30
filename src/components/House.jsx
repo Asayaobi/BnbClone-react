@@ -8,7 +8,6 @@ import Booking from './Booking'
 function House() {
   //useParams hook to extract the id  from params.id of the house from the URL
   const params = useParams()
-  console.log('params', params)
   //Replace the hardcoded house with a an empty object, using the useState hook
   const [house, setHouse] = useState({})
   const [loading, setLoading] = useState(true)
@@ -18,7 +17,6 @@ function House() {
     let { data } = await axios.get(
       `${process.env.REACT_APP_API_URL}/houses/${params.id}`
     )
-    console.log('data------->', data)
     setHouse(data)
     setLoading(false)
   }
@@ -26,9 +24,7 @@ function House() {
   useEffect(() => {
     getHouse()
   }, [])
-  useEffect(() => {
-    console.log('house---->', house)
-  }, [loading])
+  useEffect(() => {}, [loading])
   return (
     <div className="container mx-2 md:mx-auto">
       <Nav />
