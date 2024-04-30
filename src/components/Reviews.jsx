@@ -50,7 +50,7 @@ function Reviews(props) {
   ))
 
   return (
-    <div className="grid grid-cols-3 gap-x-48 border-t-2 py-5">
+    <div className="grid lg:grid-cols-3 gap-x-48 border-t-2 py-5">
       <div className="col-span-2 mt-5">
         <div className="mb-6">
           <div className="font-bold text-xl mb-2">
