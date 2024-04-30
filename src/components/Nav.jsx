@@ -22,21 +22,21 @@ function Nav() {
         {isLoggedIn ? (
           <>
             <Link to="/bookings">
-              <button className="border border-gray-300 rounded-md p-2">
+              <button className="border border-gray-300 rounded-md p-2 h-10 items-center text-xs md:text-base ps-3.5">
                 My Bookings
               </button>
             </Link>
 
             {/* my listings button */}
             <Link to="/listings">
-              <button className="border border-gray-300 rounded-md p-2">
+              <button className="border border-gray-300 rounded-md p-2 h-10 text-xs md:text-base">
                 My Listings
               </button>
             </Link>
 
             {/* my profile button */}
             <Link to="/profile">
-              <button className="flex border border-gray-300 rounded-md p-2">
+              <button className="border border-gray-300 rounded-md p-2 h-10 text-xs md:text-base">
                 <div className=" pl-2">My Profile</div>
               </button>
             </Link>
