@@ -16,7 +16,6 @@ function Profile() {
       const response = await axios.get(
         `${process.env.REACT_APP_API_URL}/profile`
       )
-      console.log('userdata', response.data)
       if (response.data.error) {
         navigate('/')
       } else {
@@ -32,13 +31,11 @@ function Profile() {
     // alert('working')
     const form = new FormData(e.target)
     const formObj = Object.fromEntries(form.entries())
-    console.log(formObj)
     try {
       const response = await axios.patch(
         `${process.env.REACT_APP_API_URL}/profile`,
         formObj
       )
-      console.log('patch response', response.data)
       setUser(response.data)
       setPicture(response.data.picture)
       setMessage(true)
