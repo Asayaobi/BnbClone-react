@@ -68,7 +68,7 @@ function Booking({ house }) {
 
   return (
     <>
-      <div className="border border-gray-200 self-start lg:my-5 lg:ml-5 p-4 rounded-md">
+      <div className="border border-gray-200 self-start my-2 lg:my-5 lg:ml-5 p-4 rounded-md">
         {/* booking form */}
         {booked ? (
           <div className=" bg-emerald-50 text-center rounded p-6 mt-3 h-20">
