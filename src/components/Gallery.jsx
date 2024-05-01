@@ -13,7 +13,7 @@ function Gallery(props) {
         {/* Right Pictures */}
         <div className="grid grid-cols-3 gap-2">
           {props.images.map((image, index) => (
-            <div key={index} className=" w-70 h-40 overflow-hidden">
+            <div key={index} className="w-70 h-40 overflow-hidden">
               <img
                 src={image}
                 alt="Sample"
