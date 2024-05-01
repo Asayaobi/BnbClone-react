@@ -7,7 +7,7 @@ function Gallery(props) {
       {/* Left Picture */}
       <div className="grid grid-row lg:grid-cols-2 gap-10">
         <div className=" bg-white">
-          <img src={selectedImage} alt="Sample" className=" rounded-md" />
+          <img src={selectedImage} alt="Sample" className="rounded-md" />
         </div>
 
         {/* Right Pictures */}
@@ -17,7 +17,7 @@ function Gallery(props) {
               <img
                 src={image}
                 alt="Sample"
-                className="w-full h-full object-cover rounded-md"
+                className="w-full h-full object-cover rounded-md cursor-pointer"
                 onClick={(event) => {
                   setSelectedImage(image)
                 }}
