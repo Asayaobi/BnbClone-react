@@ -4,7 +4,7 @@
 
 Copy `.env.example` file, name it `.env` and add credentials.
 
-2. To text this project, create a new user or use these following details
+2. To test this project, create a new user or use these following details
 
 email : demouser@airbnb.com
 password : demo123
