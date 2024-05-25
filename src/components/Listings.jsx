@@ -28,6 +28,7 @@ function Listings() {
     const formObject = Object.fromEntries(formData.entries())
 
     formObject.photos = formData.getAll('photos')
+    console.log('formObject', formObject)
 
     try {
       // Send houseData to the API
@@ -37,6 +38,7 @@ function Listings() {
       )
       // Update state with the newly created house object
       setListings((prevListings) => [...prevListings, response.data])
+      console.log('response.data', response.data)
     } catch (error) {
       console.error('Error creating house:', error)
       // Display error message near the Submit button
@@ -59,7 +61,6 @@ function Listings() {
               <input
                 name="location"
                 type="text"
-                defaultValue="Bali, Indonesia"
                 className="border border-gray-200 rounded-md p-2 w-full placeholder-black"
               />
               <div className=" text-gray-400 mt-2 text-sm">Bedrooms</div>
