@@ -7,6 +7,7 @@ function HouseCard(props) {
   const booking = props.house
   const isBooking = props.isBooking
   const isListing = props.isListing
+  console.log('booking', booking)
 
   return (
     //  used a template literal (${props.house.house_id}) to dynamically generate the URL based on the house_id value from props
@@ -23,8 +24,8 @@ function HouseCard(props) {
         {/* location, room, and price */}
         <div className=" pl-5 pr-5">
           <div className=" text-lg font-bold">{booking.location}</div>
-          <div className=" text-gray-500">{`${booking.bedrooms} rooms • ${booking.bathrooms} bathrooms`}</div>
-          <div className=" text-xl font-bold">{`$ ${booking.price}`}</div>
+          <div className=" text-gray-500">{`${booking.bedrooms} bedrooms • ${booking.bathrooms} bathrooms`}</div>
+          <div className=" text-xl font-bold">{`$ ${booking.price || booking.price_per_night}`}</div>
           <div className="flex justify-between mt-3">
             {/* ratings and stars */}
             <span className="flex gap-x-1">
