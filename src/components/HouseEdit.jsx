@@ -37,8 +37,9 @@ function HouseEdit() {
       const form = new FormData(e.target)
       const formObj = Object.fromEntries(form.entries())
       //retrieves all 'images' field in an array of strings
-      formObj.photos = form.getAll('images')
+      formObj.images = form.getAll('images')
       formObj.house_id = params
+      console.log('formObj', formObj)
       let response = await axios.patch(
         `${process.env.REACT_APP_API_URL}/houses/${params.id}`,
         formObj
@@ -106,63 +107,63 @@ function HouseEdit() {
               <input
                 name="images"
                 type="text"
-                defaultValue={house.images && house.images[0]}
+                defaultValue={house.images[0]}
                 placeholder={house.images && house.images[0]}
                 className="border border-gray-200 rounded-md p-2 w-full placeholder-black"
               />
               <input
                 name="images"
                 type="text"
-                defaultValue={house.images && house.images[1]}
+                defaultValue={house.images[1]}
                 placeholder={house.images && house.images[1]}
                 className="border border-gray-200 rounded-md p-2 w-full mt-2 placeholder-black"
               />
               <input
                 name="images"
                 type="text"
-                defaultValue={house.images && house.images[2]}
+                defaultValue={house.images[2]}
                 placeholder={house.images && house.images[2]}
                 className="border border-gray-200 rounded-md p-2 w-full mt-2 placeholder-black"
               />
               <input
                 name="images"
                 type="text"
-                defaultValue={house.images && house.images[3]}
+                defaultValue={house.images[3]}
                 placeholder={house.images && house.images[3]}
                 className="border border-gray-200 rounded-md p-2 w-full mt-2 placeholder-black"
               />
               <input
                 name="images"
                 type="text"
-                defaultValue={house.images && house.images[4]}
+                defaultValue={house.images[4]}
                 placeholder={house.images && house.images[4]}
                 className="border border-gray-200 rounded-md p-2 w-full mt-2 placeholder-black"
               />
               <input
                 name="images"
                 type="text"
-                defaultValue={house.images && house.images[5]}
+                defaultValue={house.images[5]}
                 placeholder={house.images && house.images[5]}
                 className="border border-gray-200 rounded-md p-2 w-full mt-2 placeholder-black"
               />
               <input
                 name="images"
                 type="text"
-                defaultValue={house.images && house.images[6]}
+                defaultValue={house.images[6]}
                 placeholder={house.images && house.images[6]}
                 className="border border-gray-200 rounded-md p-2 w-full mt-2 placeholder-black"
               />
               <input
                 name="images"
                 type="text"
-                defaultValue={house.images && house.images[7]}
+                defaultValue={house.images[7]}
                 placeholder={house.images && house.images[7]}
                 className="border border-gray-200 rounded-md p-2 w-full mt-2 placeholder-black"
               />
               <input
                 name="images"
                 type="text"
-                defaultValue={house.images && house.images[8]}
+                defaultValue={house.images[8]}
                 placeholder={house.images && house.images[8]}
                 className="border border-gray-200 rounded-md p-2 w-full mt-2 placeholder-black"
               />
