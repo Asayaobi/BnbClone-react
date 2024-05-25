@@ -7,7 +7,6 @@ function HouseCard(props) {
   const booking = props.house
   const isBooking = props.isBooking
   const isListing = props.isListing
-  console.log('booking', booking)
 
   return (
     //  used a template literal (${props.house.house_id}) to dynamically generate the URL based on the house_id value from props

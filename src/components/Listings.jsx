@@ -28,7 +28,6 @@ function Listings() {
     const formObject = Object.fromEntries(formData.entries())
 
     formObject.photos = formData.getAll('photos')
-    console.log('formObject', formObject)
 
     try {
       // Send houseData to the API
@@ -38,7 +37,6 @@ function Listings() {
       )
       // Update state with the newly created house object
       setListings((prevListings) => [...prevListings, response.data])
-      console.log('response.data', response.data)
     } catch (error) {
       console.error('Error creating house:', error)
       // Display error message near the Submit button
