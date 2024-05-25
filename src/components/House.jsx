@@ -39,7 +39,7 @@ function House() {
               <div className=" text-3xl font-bold mt-5">{house.location}</div>
               <div className="flex text-gray-400 mt-4 text-sm gap-2">
                 <div>{house.bedrooms}</div>
-                <div> rooms • </div>
+                <div> bedrooms • </div>
                 <div>{house.bathrooms}</div>
                 <div>bathrooms</div>
               </div>
