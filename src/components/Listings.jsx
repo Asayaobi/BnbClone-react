@@ -6,6 +6,7 @@ axios.defaults.withCredentials = true
 
 function Listings() {
   const [listings, setListings] = useState([])
+  const [error, setError] = useState('')
 
   useEffect(() => {
     async function fetchListings() {
@@ -35,11 +36,15 @@ function Listings() {
         `${process.env.REACT_APP_API_URL}/houses`,
         formObject
       )
-      // Update state with the newly created house object
-      setListings((prevListings) => [...prevListings, response.data])
+      //add error message
+      if (response.data.error) {
+        setError(response.data.error)
+      } else {
+        // Update state with the newly created house object
+        setListings((prevListings) => [...prevListings, response.data])
+      }
     } catch (error) {
       console.error('Error creating house:', error)
-      // Display error message near the Submit button
     }
   }
 
