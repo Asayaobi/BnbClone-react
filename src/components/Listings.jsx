@@ -149,7 +149,7 @@ function Listings() {
             </button>
             {/* add error message */}
             {error ? (
-              <span className="flex justify-center text-center text-red-500 text-xs">
+              <span className="flex justify-center items-center text-red-500 text-xs">
                 {error}
               </span>
             ) : null}
