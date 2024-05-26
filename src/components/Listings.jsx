@@ -147,6 +147,12 @@ function Listings() {
             <button className=" bg-rose-400 text-white rounded-md p-3">
               List House
             </button>
+            {/* add error message */}
+            {error ? (
+              <span className="flex justify-center text-center text-red-500 text-xs">
+                {error}
+              </span>
+            ) : null}
           </div>
         </div>
       </form>
