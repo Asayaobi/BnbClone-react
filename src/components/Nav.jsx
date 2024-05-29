@@ -3,8 +3,8 @@ import axios from 'axios'
 axios.defaults.withCredentials = true
 
 function Nav() {
-  // const isLoggedIn = false
-  const isLoggedIn = localStorage.getItem('isLoggedIn')
+  const isLoggedIn = false
+  // const isLoggedIn = localStorage.getItem('isLoggedIn')
 
   return (
     <div className="flex justify-between my-2 items-center">
