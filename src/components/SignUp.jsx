@@ -39,7 +39,7 @@ function SignUp() {
         last_name: e.target.last_name.value,
         email: e.target.email.value,
         password: e.target.password.value,
-        picture: e.target.picture.value
+        profile_pic_url: e.target.picture.value
       }
     )
     console.log('response', response)
