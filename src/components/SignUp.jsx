@@ -39,10 +39,10 @@ function SignUp() {
         last_name: e.target.last_name.value,
         email: e.target.email.value,
         password: e.target.password.value,
-        picture: e.target.picture.value
+        profile_pic_url: e.target.picture.value
       }
     )
-    console.log('response', response)
+    console.log('response from signup', response)
     // if you log in, navigate to the home page, if not, show error message
     if (response.data.error) {
       setError(response.data.error)
